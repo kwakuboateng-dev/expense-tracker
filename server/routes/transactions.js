@@ -1,9 +1,10 @@
-import express from 'express';
+const express = require('express');
+
+const { addIncome } = require('../controllers/income.controller.js');
+
 const router = express.Router();
-
-router.get('/', (req, res) => {
-  res.send('Transactions');
-});
+router.post('/add-income', addIncome);
 
 
-export default router;
+
+module.exports = router;
